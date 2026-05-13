@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Gaming Website</title>
+
+  <style>
+    body{
+      background:black;
+      color:white;
+      font-family:Arial;
+      text-align:center;
+    }
+
+    h1{
+      color:lime;
+      margin-top:50px;
+    }
+
+    .game{
+      margin-top:30px;
+    }
+
+    iframe{
+      width:80%;
+      height:500px;
+      border:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎮 My Free Gaming Website</h1>
+
+<p>Play online games free!</p>
+
+<div class="game">
+  <iframe src="https://html5.gamemonetize.com/"></iframe>
+</div>
+
+</body>
+</html>

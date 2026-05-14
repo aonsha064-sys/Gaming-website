@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gaming Zone</title>
+<title>GamingZone</title>
 
 <style>
 
@@ -58,10 +56,10 @@ nav ul li a:hover{
 color:#00ff99;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
-height:80vh;
+height:85vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -86,6 +84,7 @@ text-shadow:0 0 20px #00ff99;
 font-size:24px;
 max-width:700px;
 margin-bottom:30px;
+line-height:1.5;
 }
 
 .hero button{
@@ -94,8 +93,8 @@ font-size:20px;
 border:none;
 border-radius:40px;
 background:#00ff99;
-cursor:pointer;
 font-weight:bold;
+cursor:pointer;
 transition:0.3s;
 }
 
@@ -104,7 +103,49 @@ transform:scale(1.1);
 background:white;
 }
 
-/* GAMES */
+/* CATEGORY SECTION */
+
+.categories{
+padding:60px 20px;
+text-align:center;
+}
+
+.categories h1{
+font-size:45px;
+margin-bottom:40px;
+color:#00ff99;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.category-card{
+background:#141414;
+padding:30px;
+border-radius:20px;
+transition:0.3s;
+box-shadow:0 0 10px rgba(0,255,153,0.2);
+}
+
+.category-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00ff99;
+}
+
+.category-card h2{
+margin-top:15px;
+font-size:28px;
+}
+
+.category-card p{
+margin-top:10px;
+color:#bbb;
+}
+
+/* TRENDING GAMES */
 
 .games-section{
 padding:60px 20px;
@@ -163,13 +204,38 @@ transition:0.3s;
 background:white;
 }
 
+/* STATS */
+
+.stats{
+padding:60px 20px;
+background:#111;
+text-align:center;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.stat-card{
+background:#181818;
+padding:30px;
+border-radius:20px;
+}
+
+.stat-card h1{
+font-size:50px;
+color:#00ff99;
+}
+
 /* FOOTER */
 
 footer{
 background:#111;
 padding:30px;
 text-align:center;
-margin-top:50px;
 border-top:2px solid #00ff99;
 }
 
@@ -195,6 +261,7 @@ padding:15px 20px;
 
 nav ul{
 gap:10px;
+font-size:14px;
 }
 
 }
@@ -207,16 +274,14 @@ gap:10px;
 <!-- NAVBAR -->
 
 <nav>
-
 <div class="logo">🎮 GamingZone</div>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Games</a></li>
-<li><a href="#">Trending</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#games">Games</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <!-- HERO -->
@@ -226,8 +291,8 @@ gap:10px;
 <h1>PLAY FREE ONLINE GAMES</h1>
 
 <p>
-Discover exciting browser games, racing games, shooting games,
-and adventure games — all free and instant.
+Enjoy exciting browser games instantly with no downloads.
+Play racing, shooting, puzzle, adventure and multiplayer games for free.
 </p>
 
 <button onclick="document.getElementById('games').scrollIntoView();">
@@ -236,7 +301,39 @@ Play Now
 
 </section>
 
-<!-- GAMES -->
+<!-- CATEGORIES -->
+
+<section class="categories" id="categories">
+
+<h1>🎯 Game Categories</h1>
+
+<div class="category-grid">
+
+<div class="category-card">
+<h2>🏎 Racing</h2>
+<p>Fast cars and drifting games.</p>
+</div>
+
+<div class="category-card">
+<h2>🔫 Shooting</h2>
+<p>Action packed battle games.</p>
+</div>
+
+<div class="category-card">
+<h2>🧩 Puzzle</h2>
+<p>Brain teasing puzzle games.</p>
+</div>
+
+<div class="category-card">
+<h2>🌍 Multiplayer</h2>
+<p>Play online with friends.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRENDING GAMES -->
 
 <section class="games-section" id="games">
 
@@ -250,7 +347,7 @@ Play Now
 
 <h2>Arcade Game</h2>
 
-<iframe 
+<iframe
 src="https://html5.gamemonetize.co/x3jw3y1rebkqxbicmtf19ybhjg0rr8d5/">
 </iframe>
 
@@ -266,7 +363,7 @@ Play Game
 
 <h2>Snake Game</h2>
 
-<iframe 
+<iframe
 src="https://plays.org/game/snake-is/">
 </iframe>
 
@@ -282,7 +379,7 @@ Play Game
 
 <h2>Chess Game</h2>
 
-<iframe 
+<iframe
 src="https://plays.org/game/master-chess/">
 </iframe>
 
@@ -296,12 +393,39 @@ Play Game
 
 </section>
 
+<!-- STATS -->
+
+<section class="stats">
+
+<h1 class="section-title">📊 Gaming Community</h1>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h1>100+</h1>
+<p>Games</p>
+</div>
+
+<div class="stat-card">
+<h1>10K+</h1>
+<p>Players</p>
+</div>
+
+<div class="stat-card">
+<h1>24/7</h1>
+<p>Online Fun</p>
+</div>
+
+</div>
+
+</section>
+
 <!-- FOOTER -->
 
-<footer>
+<footer id="contact">
 
 <p>
-© 2026 GamingZone — Play Free Games Online
+© 2026 GamingZone — Play Free Browser Games Online
 </p>
 
 </footer>
